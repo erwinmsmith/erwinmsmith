@@ -14,6 +14,9 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v4
+
       - name: Generate snake SVG
         uses: Platane/snk/svg-only@v3
         with:
@@ -32,3 +35,15 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Refresh README image cache key
+        run: |
+          stamp="$(date -u +%Y%m%d%H%M%S)"
+          perl -0pi -e 's|github-contribution-grid-snake-white\.svg(?:\?v=\d+)?|github-contribution-grid-snake-white.svg?v='"$stamp"'|g' README.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh contribution snake cache [skip ci]"
+            git push origin HEAD:main
+          fi
