@@ -1,14 +1,14 @@
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
-    srcset="https://cdn.jsdelivr.net/gh/erwinmsmith/erwinmsmith@output/github-contribution-grid-snake-white.svg?v=20261022025155"
+    srcset="https://cdn.jsdelivr.net/gh/erwinmsmith/erwinmsmith@output/github-contribution-grid-snake-white.svg?v=20261023025546"
   />
   <source
     media="(prefers-color-scheme: light)"
-    srcset="https://cdn.jsdelivr.net/gh/erwinmsmith/erwinmsmith@output/github-contribution-grid-snake-white.svg?v=20261022025155"
+    srcset="https://cdn.jsdelivr.net/gh/erwinmsmith/erwinmsmith@output/github-contribution-grid-snake-white.svg?v=20261023025546"
   />
   <img
     alt="github contribution grid snake animation"
-    src="https://cdn.jsdelivr.net/gh/erwinmsmith/erwinmsmith@output/github-contribution-grid-snake-white.svg?v=20261022025155"
+    src="https://cdn.jsdelivr.net/gh/erwinmsmith/erwinmsmith@output/github-contribution-grid-snake-white.svg?v=20261023025546"
   />
 </picture>
